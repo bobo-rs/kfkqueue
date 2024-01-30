@@ -21,6 +21,12 @@ func (q *SQueue) Client() (client sarama.Client, err error) {
 	default:
 		config.Producer.RequiredAcks = sarama.NoResponse
 	}
+	// 配置账户和密码
+	if q.AccountCfg.Enabled == true {
+		config.Net.SASL.Enable = q.AccountCfg.Enabled
+		config.Net.SASL.User = q.AccountCfg.UserName
+		config.Net.SASL.Password = q.AccountCfg.Pwd
+	}
 
 	// 创建客户端
 	return sarama.NewClient(q.Addrs, config)

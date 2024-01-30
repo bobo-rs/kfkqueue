@@ -75,3 +75,10 @@ func (q *SQueue) SetJobsMap(jobsMap map[string]Jobs) *SQueue {
 	q.JobsMap = jobsMap
 	return q
 }
+
+
+// SetAccountCfg kafka消息账户配置
+func (q *SQueue) SetAccountCfg(cfg AccountCfg) *SQueue {
+	q.AccountCfg = cfg
+	return q
+}

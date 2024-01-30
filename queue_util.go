@@ -35,7 +35,7 @@ func (q *SQueue) handlerSendMessage(item ClaimItem) (*sarama.ProducerMessage, er
 }
 
 // Validate 验证必要规则属性
-func (q SQueue) Validate() error {
+func (q *SQueue) Validate() error {
 	if len(q.Addrs) == 0 {
 		return gerror.New("Queue：缺少Kafka客户端代理ICP地址")
 	}
@@ -46,6 +46,12 @@ func (q SQueue) Validate() error {
 	// Jobs任务
 	if len(q.JobsMap) == 0 {
 		return gerror.New("Queue：请先注册Jobs任务，再操作")
+	}
+	// 账户认证
+	if q.AccountCfg.Enabled == true {
+		if q.AccountCfg.UserName == "" || q.AccountCfg.Pwd == "" {
+			return gerror.New("Queue：缺少Kafka账户或密码")
+		}
 	}
 	return nil
 }

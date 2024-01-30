@@ -3,6 +3,7 @@ package exmaple
 import (
 	"context"
 	"fmt"
+	"github.com/bobo-rs/mall-util/utli"
 	"strconv"
 	"testing"
 )
@@ -59,4 +60,8 @@ func Test_Consumer(t *testing.T) {
 	fmt.Println(
 		Exmaple_ClientQueue(QueueCfg{}).Consumer(ctx),
 	)
+}
+
+func Test_Calculate(t *testing.T) {
+	fmt.Println(util.Sub(88, "234324", 3))
 }

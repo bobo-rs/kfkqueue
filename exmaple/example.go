@@ -1,6 +1,6 @@
 package exmaple
 
-import "kfkqueue"
+import "github.com/bobo-rs/kfkqueue"
 
 type QueueCfg struct {
 	// 配置Kafka地址

@@ -31,6 +31,22 @@ type (
 
 		// 消费任务执行Jobs
 		JobsMap map[string]Jobs
+
+		// 账户信息
+		AccountCfg AccountCfg
+
+	}
+
+	// Kafka账户配置
+	AccountCfg struct {
+		// 是否认证开启账户密码：false关闭，true开启
+		Enabled bool
+
+		// kafka账户名
+		UserName string
+
+		// kafka密码
+		Pwd string
 	}
 
 	// ConsumerGrp 消费组后置处理操作: 定义结构体实现消费逻辑（ConsumerGroupHandler）
