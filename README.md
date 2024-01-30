@@ -116,7 +116,7 @@ func Test_SyncProducer(t *testing.T) {
 	fmt.Println()
 }
 ```
-2. 消费者使用示例
+### 消费者使用示例
 ```go
 func Test_Consumer(t *testing.T) {
 	ctx := context.Background()
@@ -125,6 +125,12 @@ func Test_Consumer(t *testing.T) {
 	)
 }
 ```
+
+### 完整示例
+~~~
+exmaple：包
+~~~
+
 ## 依赖
 1. Kafka操作包：github.com/IBM/sarama
 2. Goframe工具包：github.com/gogf/gf/v2
