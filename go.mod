@@ -1,4 +1,4 @@
-module kfkqueue
+module github.com/bobo-rs/kfkqueue
 
 go 1.20
 
