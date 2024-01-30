@@ -12,7 +12,7 @@
 
 ## 安装
 ~~~
-1.可直接使用Go管理包进行安装：go get -u git@github.com/bobo-rs/kfkqueue
+1.可直接使用Go管理包进行安装：go get -u github.com/bobo-rs/kfkqueue
 ~~~
 
 ## 使用
