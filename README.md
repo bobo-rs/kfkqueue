@@ -1,4 +1,4 @@
-# kfkqueue 消息队列，用于操作Kafka消息中间件
+# kfkqueue 消息队列，用于操作Kafka消息中间件-开发中
 
 
 ## 简介
